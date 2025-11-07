@@ -14,10 +14,7 @@ const app = express();
 
 // ✅ CORS multi-origin support (5173, 5174 both)
 app.use(
-  cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
-    credentials: true, // allow cookies/headers
-  })
+  cors()
 );
 console.log("✅ Cart router mounted at /api/cart");
 // ✅ Middleware
