@@ -13,9 +13,7 @@ const cartRouter = require("./routes/cartRoute");
 const app = express();
 
 // ✅ CORS multi-origin support (5173, 5174 both)
-app.use(cors({
-  origin: "*"
-}));
+app.use(cors());
 
 console.log("✅ Cart router mounted at /api/cart");
 // ✅ Middleware
