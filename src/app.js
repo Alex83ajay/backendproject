@@ -40,6 +40,7 @@ app.use("/api/cart", cartRouter);
 app.use(errorMiddleWare);
 
 // ✅ Create server
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
-module.exports = server;
+// module.exports = server;
+module.exports = app;
