@@ -199,7 +199,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY); // put your secret key
 const razorpay=require("razorpay");
 const { options } = require('../routes/order');
 
-//global variables
+//global variables  
 
 const currency="inr"
 const deliveryCharge=10
@@ -207,7 +207,7 @@ const razorpayInstance=new razorpay({
   key_id:process.env.RAZORPAY_KEY_ID,
   key_secret:process.env.RAZORPAY_KEY_SECRET,
 })
-
+ 
 // my project dress shop
 
 
@@ -242,7 +242,7 @@ const placeOrder = async (req, res) => {
 
 
  //placing order using stripe method 
-
+  
 
 const placeOrderStripe=async(req,res)=>{
       try {

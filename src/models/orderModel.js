@@ -8,7 +8,7 @@ const orderSchema = new mongoose.Schema({
       quantity: { type: Number, required: true },
       size: { type: String },
       price: { type: Number, required: true }
-    }
+    }  
   ],
   amount: { type: Number, required: true },
   address: { type: Object, required: true },
@@ -21,3 +21,4 @@ const orderSchema = new mongoose.Schema({
 const orderModel = mongoose.model('Order', orderSchema);
 
 module.exports = orderModel;
+      

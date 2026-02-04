@@ -155,6 +155,7 @@ const adminRegisterController = catchAsyncError(async (req, res) => {
     const userData = await new UserModel({
       username,
       email,
+      role:"admin", 
       password: hashedPassword, // hashed value stored
       // avatar,
     }).save();

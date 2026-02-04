@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema(
     email: {
       type: String,
       required: [true, "Email is required"],
+      index:true,
       unique: true,
       validate: [validator.isEmail, "Please enter valid email address"],
     },
@@ -58,6 +59,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       enum: ["user", "admin"],
       default: "user",
+      index:true
     },
 
   },

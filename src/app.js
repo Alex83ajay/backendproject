@@ -13,12 +13,18 @@ const cartRouter = require("./routes/cartRoute");
 const app = express();
 
 // ✅ CORS multi-origin support (5173, 5174 both)
-app.use(
-  cors()
-);
+app.use(cors({
+  origin: "*"
+}));
+
 console.log("✅ Cart router mounted at /api/cart");
 // ✅ Middleware
 app.use(express.json());
+
+
+app.get("/", (req, res) => {
+  res.send("Backend running on Vercel 🚀");
+});
 
 // app.use('/uploads', express.static('src/uploads'));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
